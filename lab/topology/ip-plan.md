@@ -1,10 +1,12 @@
 # IP Plan 
 
-## Management / NSX-T Components (example)
-- NSX Manager: 10.5.50.5
-- vCenter (if used): 10.5.50.5
+## Management / NSX Components 
+- DNS server 10.5.50.2
+- vCenter Server: 10.5.50.5
 - ESXi mgmt: 10.5.50.11-14
-- edge nodes: 
+- NSX Cluster: 10.5.50.20
+- NSX Manager: 10.5.50.15-17
+- Edge nodes: 
 
 ## Workload Segments
 - SEG-USER: 10.10.10.0/24
