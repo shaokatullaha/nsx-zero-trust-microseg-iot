@@ -6,13 +6,14 @@
 - ESXi mgmt: 10.5.50.11-14
 - NSX Cluster: 10.5.50.20
 - NSX Manager: 10.5.50.15-17
-- Edge nodes: 
+- Edge nodes: 10.5.50.18-19
 
 ## Workload Segments
-- SEG-USER: 10.10.10.0/24
-- SEG-APP:  10.10.20.0/24
-- SEG-DB:   10.10.30.0/24
-- SEG-IOT:  10.10.40.0/24
+- USER-Segment: 10.50.10.0/24
+- Web-Segment:  10.50.20.0/24 
+- APP-Segment:  10.50.30.0/24
+- DB-Segment:   10.50.40.0/24
+- IoT-Segment:  10.50.50.0/24
 
 ## Gateways
 - T1-ZT (Tier-1): 10.10.10.1, 10.10.20.1, 10.10.30.1, 10.10.40.1
