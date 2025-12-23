@@ -1,21 +1,28 @@
 # Zero Trust Micro-Segmentation for Enterprise & IoT Networks using VMware NSX
 
-This repository contains an MSc-level applied cybersecurity project that designs, implements, and evaluates
-a **Zero Trust micro-segmentation architecture** using **VMware NSX Distributed Firewall (DFW)** to prevent
-lateral movement attacks across **enterprise workloads** and an **IoT-like zone**.
+## Overview
 
-## Goals
-- Implement **least-privilege** east-west traffic control using NSX DFW
-- Build an **enterprise + IoT** lab topology with clear security zones
-- Compare security posture **before vs after** micro-segmentation
-- Simulate attack paths (lateral movement) and measure containment outcomes
+This project presents an **applied Zero Trust security architecture** implemented using **VMware NSX Distributed Firewall (DFW)** to protect **enterprise workloads and IoT devices** from lateral movement attacks.
 
-## Tech Stack
-- VMware vSphere (lab)
-- VMware NSX (DFW, Segments, Groups, Policies)
-- Linux & Windows VMs
-- Basic attacker VM (Kali or equivalent) for simulation
-- tcpdump/Wireshark for traffic analysis
+The work demonstrates how **default-deny east-west controls, identity-driven policy enforcement**, and **continuous verification** significantly improve internal network security compared to traditional flat network designs.
+
+The project is implemented in a **real VMware NSX lab**, validated through **attack simulation**, and supported by **measurable before/after security evidence**, making it suitable for both **MSc Cybersecurity evaluation** and **real-world enterprise security reference.**
+
+## Problem Statement
+
+Modern enterprise networks increasingly include **IoT devices** alongside critical application workloads.
+In flat or perimeter-focused network designs, a single compromised device can enable **unrestricted lateral movement**, leading to ransomware spread, data breaches, or service disruption.
+
+This project addresses the question:
+
+"How effectively can Zero Trust micro-segmentation reduce lateral movement risk across enterprise and IoT workloads in a realistic network environment?"
+
+## Project Objectives
+- Enforce **default-deny east-west traffic control**
+- Apply **least-privilege access** using dynamic, identity-based policies
+- Isolate IoT devices to **only required services**
+- Compare **security posture before vs. after micro-segmentation**
+- Validate effectiveness through **controlled attack simulations**
 
 ## Lab Topology (High Level)
 Zones:
