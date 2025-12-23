@@ -50,4 +50,5 @@ Zones:
 9. Complete `results/report-template.md`
 
 ## Disclaimer
-This project is designed for **authorized lab use only**. Do not run attack simulations on production networks.
+This project is intended exclusively **only for authorized laboratory environments**.
+No attack simulations should be performed on production networks.
