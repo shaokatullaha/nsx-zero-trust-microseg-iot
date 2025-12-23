@@ -130,6 +130,7 @@ This project is suitable for:
   - Scholarship and admission portfolio review
   - Enterprise security architecture reference
   - Professional interviews and consulting demonstrations
+
 It demonstrates applied knowledge of:
 
   - Zero Trust Architecture (ZTA)
