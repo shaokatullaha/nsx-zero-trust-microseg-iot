@@ -96,6 +96,47 @@ Attack simulations are performed from a **compromised IoT workload**, attempting
 
 All results are validated using **NSX firewall logs, rule hit counts, and blocked session evidence**.
 
+## Validation Methodology
+
+1. Baseline phase
+
+        - Flat network behavior observed
+        - Unrestricted east-west communication verified
+
+2. Zero Trust enforcement phase
+
+        - Micro-segmentation policies applied
+        - Application functionality validated
+
+3. Attack simulation phase
+
+        - Unauthorized lateral movement attempts executed
+        - All blocked connections documented
+
+## Results Summary
+
+- Significant reduction in permitted east-west traffic
+- IoT workloads fully isolated from enterprise application tiers
+- 100% block rate for simulated lateral movement attempts
+- No disruption to legitimate application flows
+
+Detailed evidence is available in docs/results.md.
+
+## Academic & Professional Relevance
+
+This project is suitable for:
+
+  - MSc Cybersecurity capstone or dissertation work
+  - Scholarship and admission portfolio review
+  - Enterprise security architecture reference
+  - Professional interviews and consulting demonstrations
+It demonstrates applied knowledge of:
+
+  - Zero Trust Architecture (ZTA)
+  - Network access control
+  - Threat containment
+  - Security validation and measurement
+
 ## Disclaimer
 This project is intended exclusively **only for authorized laboratory environments**.
 No attack simulations should be performed on production networks.
