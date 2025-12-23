@@ -24,30 +24,77 @@ This project addresses the question:
 - Compare **security posture before vs. after micro-segmentation**
 - Validate effectiveness through **controlled attack simulations**
 
-## Lab Topology (High Level)
-Zones:
-- User Zone (jumpbox / admin)
-- App Zone (web/app)
-- DB Zone (database)
-- IoT Zone (simulated IoT services)
-- Management Zone (vCenter/NSX managers)
+## High-Level Architecture
 
-## Repository Guide
-- `docs/` – proposal, architecture, threat model, evaluation
-- `lab/` – IP plan, segments, NSX objects and policies, runbooks
+<p align="center">
+  <img src="" width="800">
+</p>
+<p align="center">
+  <img src="" width="800">
+</p>
+<p align="center">
+  <img src="" width="800">
+</p>
+
+## Security Zones
+- **MGMT** – vCenter, NSX Manager, jump host, logging
+- **SHARED** – DNS, NTP, authentication services
+- **APP-TIER** – Web and application services
+- **DB-TIER** – Databases
+- **IoT-ZONE** – Simulated IoT devices (CCTV, sensors, controllers)
+- **(Optional) USER-ZONE** – Admin or user access systems
+
 - `scripts/` – traffic generators, simulation helpers, log collectors
-- `results/` – baseline vs micro-segmentation evidence & report template
 
-## How to Use (Suggested Order)
-1. Read `docs/project-proposal.md`
-2. Build the lab from `lab/topology/*`
-3. Create NSX objects in `lab/nsx/objects/*`
-4. Apply baseline policy: `lab/nsx/policies/baseline-allowlist.md`
-5. Capture baseline results in `results/baseline/`
-6. Apply micro-segmentation policies
-7. Execute validation from `lab/validation/attack-scenarios.md`
-8. Record results in `results/microseg-enabled/`
-9. Complete `results/report-template.md`
+
+## Core Zero Trust Principles
+- No implicit trust based on network location
+- Explicit allow rules for required application flows only
+- IoT devices restricted to minimum necessary communication
+- Continuous verification via firewall rule enforcement and logging
+
+## Technology Stack
+- VMware vSphere (ESXi lab environment)
+- VMware NSX (Distributed Firewall, Segments, Groups, Policies)
+- Linux and Windows virtual machines
+- Simulated IoT workloads (Linux-based services)
+- Attacker VM (Kali Linux or equivalent)
+- Traffic analysis tools (tcpdump, Wireshark)
+
+## Security Design & Policy Model
+
+- **Tag-based workload identity** (e.g., zone:app, role:web, zone:iot)
+- **Dynamic groups** derived from metadata, not IP addresses
+- **Distributed Firewall (DFW)** enforcing east-west controls at the vNIC level
+- Centralized policy logic with decentralized enforcement
+
+## Example Allowed Flows
+
+- Web → API (TCP 443)
+- API → Database (TCP 3306 / 1433)
+- Any → DNS (TCP/UDP 53, restricted)
+- Any → NTP (UDP 123, restricted)
+- IoT → IoT Broker / NVR (application-specific)
+
+## Default Rule
+
+- **ANY → ANY : DENY (east-west)** 
+
+## Threat Model & Attack Simulation
+
+This project includes a structured **threat model** aligned with **MITRE ATT&CK**, focusing on:
+
+    - Network discovery
+    - Lateral movement
+    - Privilege escalation risk
+
+Attack simulations are performed from a **compromised IoT workload**, attempting to:
+
+    - Scan enterprise segments
+    - Access application and database services
+    - Pivot across security zones
+
+All results are validated using **NSX firewall logs, rule hit counts, and blocked session evidence**.
 
 ## Disclaimer
 This project is intended exclusively **only for authorized laboratory environments**.
