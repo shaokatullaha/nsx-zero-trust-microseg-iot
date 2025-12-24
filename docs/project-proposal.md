@@ -11,19 +11,22 @@ and often lacks strong internal controls. Traditional perimeter security is insu
 Design, implement, and evaluate a Zero Trust micro-segmentation architecture using VMware NSX to limit east-west
 movement and reduce blast radius across enterprise workloads and an IoT-like zone.
 
+
 ## Objectives
-1. Build an enterprise + IoT lab topology
-2. Implement NSX DFW micro-segmentation with least privilege
-3. Introduce a quarantine model for compromised workloads
-4. Simulate lateral movement and compare baseline vs segmented states
-5. Measure containment, allowed flows, and operational impact
+1. Build a realistic enterprise and IoT lab topology using VMware vSphere and NSX  
+2. Implement NSX Distributed Firewall (DFW) micro-segmentation based on least-privilege principles  
+3. Introduce a quarantine model for compromised or high-risk workloads  
+4. Simulate lateral movement attacks and compare baseline vs segmented network states  
+5. Measure containment effectiveness, allowed flows, and operational impact  
+
 
 ## Research Questions
-- How effectively does NSX micro-segmentation reduce lateral movement in mixed enterprise + IoT zones?
-- What is the trade-off between security and operational complexity?
-- Which policy model (tag-based vs group-based) is most maintainable?
+- How effectively does NSX micro-segmentation reduce lateral movement in mixed enterprise and IoT zones?
+- What trade-offs exist between security enforcement and operational complexity?
+- Which policy abstraction model (tag-based vs group-based) offers better long-term maintainability?
+
 
 ## Expected Outcomes
-- A repeatable NSX policy framework
-- Evidence-based evaluation report with metrics and test results
-- Practical guidelines for adopting Zero Trust micro-segmentation
+- A repeatable and scalable NSX micro-segmentation policy framework  
+- An evidence-based evaluation report with metrics, logs, and test results  
+- Practical implementation guidelines for adopting Zero Trust micro-segmentation in enterprise environments
