@@ -30,7 +30,7 @@ This project addresses the question:
   <img src="snap/cluster-overview.png" width="800">
 </p>
 <p align="center">
-  <img src="docs/snap/nsx-cluster-appliance.png" width="800">
+  <img src="snap/nsx-cluster-appliance.png" width="800">
 </p>
 <p align="center">
   <img src="" width="800">
