@@ -27,7 +27,7 @@ This project addresses the question:
 ## High-Level Architecture
 
 <p align="center">
-  <img src="docs/snap/cluster-overview.png" width="800">
+  <img src="snap/cluster-overview.png" width="800">
 </p>
 <p align="center">
   <img src="docs/snap/nsx-cluster-appliance.png" width="800">
