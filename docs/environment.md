@@ -3,7 +3,7 @@
 ## Platform Versions
 - VMware ESXi: 8.0.3 (4 hosts)
 - VMware vCenter: 8.0.3
-- VMware NSX: 4.2.x (Standalone)
+- VMware NSX: 4.2.x (03 node cluster)
 - Switching: vSphere Distributed Switch (VDS)
 
 ## Physical/Logical Layout
