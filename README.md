@@ -32,9 +32,7 @@ This project addresses the question:
 <p align="center">
   <img src="snap/nsx-cluster-appliance.png" width="800">
 </p>
-<p align="center">
-  <img src="" width="800">
-</p>
+
 
 ## Security Zones
 - **MGMT** – vCenter, NSX Manager, jump host, logging
